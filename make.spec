@@ -6,7 +6,7 @@
 #
 Name     : make
 Version  : 4.3
-Release  : 42
+Release  : 43
 URL      : https://mirrors.kernel.org/gnu/make/make-4.3.tar.gz
 Source0  : https://mirrors.kernel.org/gnu/make/make-4.3.tar.gz
 Source1  : https://mirrors.kernel.org/gnu/make/make-4.3.tar.gz.sig
@@ -19,8 +19,6 @@ Requires: make-license = %{version}-%{release}
 Requires: make-locales = %{version}-%{release}
 Requires: make-man = %{version}-%{release}
 BuildRequires : guile
-Patch1: skip-tests-features-archive.patch
-Patch2: 0002-Fix_tests.patch
 
 %description
 This directory contains the 4.3 release of GNU Make.
@@ -82,15 +80,13 @@ man components for the make package.
 %prep
 %setup -q -n make-4.3
 cd %{_builddir}/make-4.3
-%patch1 -p1
-%patch2 -p1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1628096509
+export SOURCE_DATE_EPOCH=1647816252
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -110,7 +106,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1628096509
+export SOURCE_DATE_EPOCH=1647816252
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/make
 cp %{_builddir}/make-4.3/COPYING %{buildroot}/usr/share/package-licenses/make/8624bcdae55baeef00cd11d5dfcfa60f68710a02

@@ -1,5 +1,8 @@
 Configure miss: GNU Guile
+Configure miss: compiler option needed when checking for declarations
+Configure miss: gcc options needed to detect all undeclared functions
 Configure miss: if malloc debugging is wanted
+Configure miss: stdbool.h that conforms to C99 or later
 Configure miss: strcmpi
 Configure miss: strncmpi
 Configure miss: union wait
@@ -8,3 +11,4 @@ Configure miss: whether _sys_siglist is declared
 Configure miss: whether bsd_signal is declared
 Configure miss: whether sys_siglist is declared
 Configure miss: whether system uses MSDOS-style paths
+Configure miss: whether the compiler is clang

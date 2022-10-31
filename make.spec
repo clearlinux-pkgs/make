@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xDEACCAAEDB78137A (psmith@gnu.org)
 #
 Name     : make
-Version  : 4.3
-Release  : 43
-URL      : https://mirrors.kernel.org/gnu/make/make-4.3.tar.gz
-Source0  : https://mirrors.kernel.org/gnu/make/make-4.3.tar.gz
-Source1  : https://mirrors.kernel.org/gnu/make/make-4.3.tar.gz.sig
+Version  : 4.4
+Release  : 44
+URL      : https://mirrors.kernel.org/gnu/make/make-4.4.tar.gz
+Source0  : https://mirrors.kernel.org/gnu/make/make-4.4.tar.gz
+Source1  : https://mirrors.kernel.org/gnu/make/make-4.4.tar.gz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-3.0 GPL-3.0+
@@ -21,7 +21,7 @@ Requires: make-man = %{version}-%{release}
 BuildRequires : guile
 
 %description
-This directory contains the 4.3 release of GNU Make.
+This directory contains the 4.4 release of GNU Make.
 See the file NEWS for the user-visible changes from previous releases.
 In addition, there have been bugs fixed.
 
@@ -78,15 +78,15 @@ man components for the make package.
 
 
 %prep
-%setup -q -n make-4.3
-cd %{_builddir}/make-4.3
+%setup -q -n make-4.4
+cd %{_builddir}/make-4.4
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1647816252
+export SOURCE_DATE_EPOCH=1667227004
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -106,10 +106,10 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1647816252
+export SOURCE_DATE_EPOCH=1667227004
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/make
-cp %{_builddir}/make-4.3/COPYING %{buildroot}/usr/share/package-licenses/make/8624bcdae55baeef00cd11d5dfcfa60f68710a02
+cp %{_builddir}/make-%{version}/COPYING %{buildroot}/usr/share/package-licenses/make/0dd432edfab90223f22e49c02e2124f87d6f0a56 || :
 %make_install
 %find_lang make
 ## install_append content
@@ -133,10 +133,11 @@ ln -s make %{buildroot}/usr/bin/gmake
 /usr/share/info/make.info
 /usr/share/info/make.info-1
 /usr/share/info/make.info-2
+/usr/share/info/make.info-3
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/make/8624bcdae55baeef00cd11d5dfcfa60f68710a02
+/usr/share/package-licenses/make/0dd432edfab90223f22e49c02e2124f87d6f0a56
 
 %files man
 %defattr(0644,root,root,0755)

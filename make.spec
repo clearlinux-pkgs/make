@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xDEACCAAEDB78137A (psmith@gnu.org)
 #
 Name     : make
-Version  : 4.4
-Release  : 44
-URL      : https://mirrors.kernel.org/gnu/make/make-4.4.tar.gz
-Source0  : https://mirrors.kernel.org/gnu/make/make-4.4.tar.gz
-Source1  : https://mirrors.kernel.org/gnu/make/make-4.4.tar.gz.sig
+Version  : 4.4.1
+Release  : 45
+URL      : https://mirrors.kernel.org/gnu/make/make-4.4.1.tar.gz
+Source0  : https://mirrors.kernel.org/gnu/make/make-4.4.1.tar.gz
+Source1  : https://mirrors.kernel.org/gnu/make/make-4.4.1.tar.gz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-3.0 GPL-3.0+
@@ -19,9 +19,12 @@ Requires: make-license = %{version}-%{release}
 Requires: make-locales = %{version}-%{release}
 Requires: make-man = %{version}-%{release}
 BuildRequires : guile
+# Suppress stripping binaries
+%define __strip /bin/true
+%define debug_package %{nil}
 
 %description
-This directory contains the 4.4 release of GNU Make.
+This directory contains the 4.4.1 release of GNU Make.
 See the file NEWS for the user-visible changes from previous releases.
 In addition, there have been bugs fixed.
 
@@ -78,23 +81,23 @@ man components for the make package.
 
 
 %prep
-%setup -q -n make-4.4
-cd %{_builddir}/make-4.4
+%setup -q -n make-4.4.1
+cd %{_builddir}/make-4.4.1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1667227004
+export SOURCE_DATE_EPOCH=1677518259
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
-export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=auto "
-export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
-export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
-export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=auto "
+export CFLAGS="$CFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
+export FCFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
+export FFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
+export CXXFLAGS="$CXXFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
 %configure --disable-static
 make  %{?_smp_mflags}
 
@@ -106,7 +109,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1667227004
+export SOURCE_DATE_EPOCH=1677518259
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/make
 cp %{_builddir}/make-%{version}/COPYING %{buildroot}/usr/share/package-licenses/make/0dd432edfab90223f22e49c02e2124f87d6f0a56 || :

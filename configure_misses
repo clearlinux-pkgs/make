@@ -1,8 +1,10 @@
 Configure miss: GNU Guile
+Configure miss: bool, true, false
 Configure miss: compiler option needed when checking for declarations
+Configure miss: g++ option to enable C++11 features
+Configure miss: gcc option to enable large file support
 Configure miss: gcc options needed to detect all undeclared functions
 Configure miss: if malloc debugging is wanted
-Configure miss: stdbool.h that conforms to C99 or later
 Configure miss: strcmpi
 Configure miss: strncmpi
 Configure miss: union wait

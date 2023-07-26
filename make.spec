@@ -6,7 +6,7 @@
 #
 Name     : make
 Version  : 4.4.1
-Release  : 45
+Release  : 46
 URL      : https://mirrors.kernel.org/gnu/make/make-4.4.1.tar.gz
 Source0  : https://mirrors.kernel.org/gnu/make/make-4.4.1.tar.gz
 Source1  : https://mirrors.kernel.org/gnu/make/make-4.4.1.tar.gz.sig

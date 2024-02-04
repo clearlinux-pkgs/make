@@ -1,16 +1,53 @@
+Configure miss: /usr/bin/gcc-14 option to enable C11 features
+Configure miss: /usr/bin/gcc-14 option to enable large file support
+Configure miss: /usr/bin/gcc-14 options needed to detect all undeclared functions
+Configure miss: GNU Guile
+Configure miss: GNU Guile
 Configure miss: GNU Guile
 Configure miss: bool, true, false
+Configure miss: bool, true, false
+Configure miss: bool, true, false
+Configure miss: compiler option needed when checking for declarations
+Configure miss: compiler option needed when checking for declarations
 Configure miss: compiler option needed when checking for declarations
 Configure miss: g++ option to enable C++11 features
+Configure miss: g++ option to enable C++11 features
+Configure miss: g++ option to enable C++11 features
+Configure miss: gcc option to enable large file support
 Configure miss: gcc option to enable large file support
 Configure miss: gcc options needed to detect all undeclared functions
+Configure miss: gcc options needed to detect all undeclared functions
 Configure miss: if malloc debugging is wanted
+Configure miss: if malloc debugging is wanted
+Configure miss: if malloc debugging is wanted
+Configure miss: posix_spawn that fails synchronously
+Configure miss: standard gettimeofday
+Configure miss: strcmpi
+Configure miss: strcmpi
 Configure miss: strcmpi
 Configure miss: strncmpi
+Configure miss: strncmpi
+Configure miss: strncmpi
+Configure miss: union wait
+Configure miss: union wait
 Configure miss: union wait
 Configure miss: whether __sys_siglist is declared
+Configure miss: whether __sys_siglist is declared
+Configure miss: whether __sys_siglist is declared
+Configure miss: whether _sys_siglist is declared
+Configure miss: whether _sys_siglist is declared
 Configure miss: whether _sys_siglist is declared
 Configure miss: whether bsd_signal is declared
+Configure miss: whether bsd_signal is declared
+Configure miss: whether bsd_signal is declared
+Configure miss: whether sys_siglist is declared
+Configure miss: whether sys_siglist is declared
 Configure miss: whether sys_siglist is declared
 Configure miss: whether system uses MSDOS-style paths
+Configure miss: whether system uses MSDOS-style paths
+Configure miss: whether system uses MSDOS-style paths
 Configure miss: whether the compiler is clang
+Configure miss: whether the compiler is clang
+Configure miss: whether the compiler is clang
+Configure miss: x86_64-clr-linux-gnu-pkg-config
+Configure miss: x86_64-clr-linux-gnu-strip

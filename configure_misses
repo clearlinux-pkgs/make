@@ -1,6 +1,3 @@
-Configure miss: /usr/bin/gcc-14 option to enable C11 features
-Configure miss: /usr/bin/gcc-14 option to enable large file support
-Configure miss: /usr/bin/gcc-14 options needed to detect all undeclared functions
 Configure miss: GNU Guile
 Configure miss: GNU Guile
 Configure miss: GNU Guile
@@ -17,6 +14,9 @@ Configure miss: gcc option to enable large file support
 Configure miss: gcc option to enable large file support
 Configure miss: gcc options needed to detect all undeclared functions
 Configure miss: gcc options needed to detect all undeclared functions
+Configure miss: gcc-14 option to enable C11 features
+Configure miss: gcc-14 option to enable large file support
+Configure miss: gcc-14 options needed to detect all undeclared functions
 Configure miss: if malloc debugging is wanted
 Configure miss: if malloc debugging is wanted
 Configure miss: if malloc debugging is wanted
